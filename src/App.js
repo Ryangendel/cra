@@ -1,7 +1,17 @@
 import logo from './logo.svg';
+import react, {useEffect} from "react"
 import './App.css';
 
 function App() {
+
+  useEffect(()=>{
+    axios.get("/bulldog")
+    .then(data=>{
+      console.log("+++++++")
+      console.log(data)
+      console.log("+++++++")
+    })
+  },[])
   return (
     <div className="App">
       <header className="App-header">
